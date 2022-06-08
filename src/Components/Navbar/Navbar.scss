@@ -1,0 +1,78 @@
+.container {
+    color: white;
+    padding: 20px 80px 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 2;
+    background: linear-gradient(to top, transparent 0%, rgba(0,0,0,0.3) 50%);
+    transition: all 0.5s ease;
+
+}
+
+.navbarscrolled {
+    background-color: rgb(20,20,20);
+    padding: 20px 80px 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    color: white;
+    transition: all 0.5s ease;
+
+}
+.main-logo {
+    height: 25px;
+    margin-right: 20px;
+}
+
+span {
+    margin-left: 20px;
+}
+
+.icon {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.profile-logo {
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+        border: none;
+        outline: none;
+        background: transparent;
+        color: white;
+        margin-right: 20px;
+        font-size: medium;
+    }
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    padding-right: 80px;
+}
+
+.options {
+    visibility: hidden;
+    position: absolute;
+}
+.options:hover {
+    visibility: visible;
+}
