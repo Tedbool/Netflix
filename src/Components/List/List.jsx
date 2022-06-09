@@ -5,11 +5,13 @@ import ListItem from '../ListItem/ListItem';
 import { useRef, useState } from 'react';
 
 
-export default function List() {
+export default function List(props) {
     const [slideNumber, setSlideNumber] = useState(0);
     const [isMoved, setIsMoved] = useState(false);
+    const [showsOrMovies, setShowOrMovies] = useState("");
 
     const listRef = useRef();
+    // console.log("list prop img is " + props.imgTitle);
 
     const handleClick = (direction) => {
         setIsMoved(true)
@@ -24,6 +26,12 @@ export default function List() {
         }
 
     }
+    const checkTypeTitles = ()=>{
+        if (props.titleShown === "movie") {
+            return setShowOrMovies("movie")
+        }
+        else return setShowOrMovies("tv")
+    }
   return (
     <div className='list'>
         <span className="list-title">Continue to watch</span>
@@ -34,12 +42,13 @@ export default function List() {
                 style={{display: !isMoved && "none"}}
                 />
             <div className="list-container" ref={listRef}>
-                <ListItem/>
-                <ListItem/>
-                <ListItem/>
+                {/* {console.log(showsOrMovies)} */}
+                <ListItem data={props.data} img={props.imgTitle}/>
+                {/* <ListItem title={props.nameTitle} img={props.imgTitle}/> */}
 
             </div>
             <ArrowForwardIosOutlined className='slider-arrow right' onClick={()=> handleClick("right")}/>
+            
         </div>
     </div>
   )

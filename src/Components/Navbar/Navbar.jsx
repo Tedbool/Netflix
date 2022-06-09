@@ -1,9 +1,10 @@
 import { ArrowDropDown, Notifications, Search } from '@material-ui/icons'
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import './Navbar.scss'
 
-export default function Navbar() {
+export default function Navbar(props) {
 
     const [isScrolled, setIsScrolled] = useState(false);
     window.onscroll = ()=> {
@@ -11,34 +12,29 @@ export default function Navbar() {
         return () => (window.onscroll = null);
     }
 
-    const [titleChosen, setTitleChosen] = useState("TV Shows");
-
-    const handleTitle = (title)=> {
-        if (title === "movie") {
-            return setTitleChosen("movie");
-        }
-        else return setTitleChosen("tv");
-    }
-    console.log(isScrolled);
+//   console.log(isScrolled);
+  
   return (
     <div >
         <div className={isScrolled ? "navbarscrolled" : "container"}>
             <div className="left">
+                <Link to={"/"}>
                 <img
                     src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png'
                     alt=''
                     className='main-logo'
                 />
+                </Link>
                 <span>Home</span>
                 <button 
-                    // onClick={handleTitle("tv")}
+                    onClick={()=>{props.changeTitle("tv")}}
                     >
-                        TV Shows
+                        <Link to="/tvshows"><span>TV Shows</span></Link>
                 </button>
                 <button 
-                    // onClick={handleTitle("movies")}
+                    onClick={()=>{props.changeTitle("movie")}}
                     >
-                        Movies
+                        <Link to="/movies"><span>Movies</span></Link>
                 </button>
                 <span>New & Popular</span>
                 <span>My List</span>

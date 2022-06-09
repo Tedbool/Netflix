@@ -53,13 +53,18 @@ span {
     align-items: center;
     justify-content: space-between;
 
+    span{
+        font-size: 16px;
+    }
+
     button {
         border: none;
         outline: none;
         background: transparent;
         color: white;
         margin-right: 20px;
-        font-size: medium;
+        // font-size: medium;
+        cursor: pointer;
     }
 }
 

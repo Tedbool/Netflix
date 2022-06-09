@@ -9,13 +9,13 @@
       },
       {
         "id": 2,
-        "img": "Assets/2.png",
+        "img": "2.png",
         "title": "Brooklyn Nine Nine",
         "desc": "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS."
       },
       {
         "id": 3,
-        "img": "Assets/3.png",
+        "img": "3.png",
         "title": "The Good Place",
         "desc": "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS."
       }
