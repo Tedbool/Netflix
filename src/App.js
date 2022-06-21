@@ -7,6 +7,7 @@ import Navbar from './Components/Navbar/Navbar';
 import { useState } from 'react';
 import Movies from './Components/Movies/Movies';
 import Register from './Components/Register/Register';
+import Login from './Components/Login/Login';
 // import 
 
 function App() {
@@ -22,17 +23,7 @@ function App() {
   }
   return (
     <div>
-      <HashRouter>
-      {/* <Navbar titleShown={titleShown} changeTitle={changeTitleShown}/> */}
-        <Routes>
-          {/* <Route path='/' element={<Homepage titleShown={titleShown}/>} /> */}
-          <Route path='/' element={<Register/>} />
-          
-          <Route path='/tvshows' element={<Tvshows/>} />
-          <Route path='/movies' element={<Movies/>} />
-        </Routes>
-      </HashRouter>
-      {/* <Homepage/> */}
+      <Homepage />
     </div>
   );
 }

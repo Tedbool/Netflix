@@ -18,24 +18,28 @@ export default function Navbar(props) {
     <div >
         <div className={isScrolled ? "navbarscrolled" : "container"}>
             <div className="left">
-                <Link to={"/"}>
+                {/* <Link to={"/"}> */}
                 <img
                     src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png'
                     alt=''
                     className='main-logo'
                 />
-                </Link>
+                {/* </Link> */}
                 <span>Home</span>
-                <button 
+                {/* <button 
                     onClick={()=>{props.changeTitle("tv")}}
-                    >
-                        <Link to="/tvshows"><span>TV Shows</span></Link>
-                </button>
-                <button 
+                    > */}
+                        {/* <Link to="/tvshows"> */}
+                            <span>TV Shows</span>
+                            {/* </Link> */}
+                {/* </button> */}
+                {/* <button 
                     onClick={()=>{props.changeTitle("movie")}}
-                    >
-                        <Link to="/movies"><span>Movies</span></Link>
-                </button>
+                    > */}
+                        {/* <Link to="/movies"> */}
+                        <span>Movies</span>
+                        {/* </Link> */}
+                {/* </button> */}
                 <span>New & Popular</span>
                 <span>My List</span>
             </div>

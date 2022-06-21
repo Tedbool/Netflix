@@ -3,14 +3,16 @@
     height: 120px;
     color: white;
     margin-right: 5px;
+    // display: flex;
+    overflow: hidden;
 
     span{
         color: red;
         font-size: x-large;
     }
     img {
-        height: 120px;
-        width: 225px;
+        height: 100%;
+        width: 100%;
         object-fit: cover;
         margin-right: 5px;
         cursor: pointer;
@@ -19,6 +21,10 @@
     &:hover {
         width: 325px;
         height: 300px;
+
+        img {
+            height: 140px;
+        }
     }
 }
 

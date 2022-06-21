@@ -18,7 +18,7 @@ export default function Homepage(props) {
     }
     else return setTitleShown("");
   }
-  
+
   const [data, setData] = useState([]);
 
   const getData = async () => {
@@ -34,8 +34,10 @@ export default function Homepage(props) {
   // console.log("Home page img " + data.img);
   return (
     <div className='homepage'>
-        {/* <Navbar titleShown={titleShown} changeTitle={changeTitleShown}/> */}
+        <Navbar titleShown={"tv"} changeTitle={changeTitleShown}/>
         <Featured titleShown={props.titleShown} changeTitle={changeTitleShown}/>
+        <List titleShown={props.titleShown} data={data} imgTitle={data.img}/>
+        <List titleShown={props.titleShown} data={data} imgTitle={data.img}/>
         <List titleShown={props.titleShown} data={data} imgTitle={data.img}/>
         {/* <List titleShown={props.titleShown}/> */}
         

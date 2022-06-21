@@ -39,15 +39,25 @@ export default function List(props) {
             <ArrowBackIosOutlined 
                 className='slider-arrow left' 
                 onClick={()=> handleClick("left")}
-                style={{display: !isMoved && "none"}}
+                style={{display: !isMoved && "none" || slideNumber === 0 ? "none" : "block"}}
                 />
             <div className="list-container" ref={listRef}>
                 {/* {console.log(showsOrMovies)} */}
-                <ListItem data={props.data} img={props.imgTitle}/>
+                <ListItem />
+                <ListItem />
+                <ListItem />
+                <ListItem />
+                <ListItem />
+                <ListItem />
+                <ListItem />
+                <ListItem />
+                <ListItem />
+                <ListItem />
                 {/* <ListItem title={props.nameTitle} img={props.imgTitle}/> */}
 
             </div>
-            <ArrowForwardIosOutlined className='slider-arrow right' onClick={()=> handleClick("right")}/>
+            <ArrowForwardIosOutlined className='slider-arrow right' onClick={()=> handleClick("right")}
+            style={{display: slideNumber===4 ? "none" : "block"}}/>
             
         </div>
     </div>
